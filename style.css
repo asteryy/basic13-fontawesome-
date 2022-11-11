@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+*{margin: 0; padding: 0;}
+img{width: 100%;}
+
+.wrap{width: 800px; margin: 0 auto;}
+.wrap .slick1{}
+
+.wrap .slick1 .slick-prev{
+    position: absolute;
+    left: 0; top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    visibility: hidden;                   /* previous라는 글자를 숨기려면 위에는 hidden, 밑에는 visible을 적어야 함 */
+    font-size: 0;                         /* 폰트사이즈는 위에는 0, 크기는 아래에서 조정 */
+}
+.wrap .slick1 .slick-prev:after{                    /* https://fontawesome.com/v5/search?o=r&m=free 아이콘 참고 */
+    content: "\f30a";                               /* \(역슬래시) 는 Enter키 위에 있는 W */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    visibility: visible;
+    font-size: 45px;
+    color: white;
+    text-shadow: 0 0 6px black;
+}
+
+.wrap .slick1 .slick-next{
+    position: absolute;
+    right: 0; top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    visibility: hidden;
+    font-size: 0;
+}
+.wrap .slick1 .slick-next:after{
+    content: "\f30b";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    visibility: visible;
+    font-size: 45px;
+    color: white;
+    text-shadow: 0 0 6px black;
+}
